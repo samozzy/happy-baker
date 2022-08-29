@@ -1,9 +1,18 @@
 ---
-layout: default 
+layout: home 
 permalink: / 
+title: Happy Bakery
+tagline: I'm an independent baker working in Nottingham and shipping throughout the UK.
+images:
+  - title: Blondies 
+    image: /static/images/h-blondies.jpg 
+  - title: Muffins 
+    image: /static/images/h-muffins.jpg 
+  - title: A tart 
+    image: /static/images/h-tart.jpg 
+  - title: Tree cake 
+    image: /static/images/h-tree.jpg 
 ---
-
-# Hello, World.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

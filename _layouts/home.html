@@ -1,0 +1,48 @@
+---
+layout: default
+--- 
+
+<div class="container-fluid d-flex align-items-center dark-sky-gradient">
+	<div class="row">
+		<div class="col-12 col-md-10 px-2 px-md-0 mx-auto">
+			<div class="card bg-dark-sky rounded-4 shadow-lg mx-4 my-5">
+				<div class="card-header bg-transparent border-0 row px-4 mt-4">
+					<div class="col-12 col-md-8 order-2 order-md-1">
+						<h1 class="display-2 my-4">{{ page.title | default: site.title }}</h1>
+					</div>
+					<div class="col-12 col-md-4 order-1 order-md-2 text-center text-md-end">
+						<img src="/static/images/izzy.png" height="175px" class="rounded-circle shadow">
+					</div>
+				</div>
+				<div class="card-body px-4">
+					{% if page.tagline and page.tagline != empty %}<h2>{{ page.tagline }}</h2>{% endif %}
+					{{ content | markdownify }}
+					<div class="w-50 mx-auto my-4">
+						<a class="btn btn-lg btn-princeton-orange shadow-sm w-100">Make an order</a></p>
+					</div>
+					<div class="container-fluid mt-1">
+						{% if page.images and page.images != empty %}
+							<div class="row row-cols-2 row-cols-lg-4">
+								{% for image in page.images %}
+									<div class="col">
+										<img class="w-100 h-auto mb-1 shadow" src="{{ image.image }}" alt="{{ image.title }}">
+									</div>
+								{% endfor %}
+							</div>
+						{% endif %}
+						<div class="row my-4">
+							<div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+								<a href="https://instagram.com/{{ site.instagram }}/" target="_blank" class="btn w-100 btn-minion-yellow shadow-sm d-flex align-items-center justify-content-center">
+									<i class="fab fa-instagram fa-2x mx-3"></i> View more on Instagram</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="card-footer footer text-center">
+					<small>Website by <a href="https://web.samosborne.me/" target="_blank">Sam Osborne</a></small>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
