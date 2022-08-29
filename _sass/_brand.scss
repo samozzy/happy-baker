@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fira+Sans:wght@300&display=swap');
+
+$font-family-sans-serif: 'Fira Sans', Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family: 'Abril Fatface', cursive, "Times New Roman", serif;
+
+$enable-shadows: true;
+
+
+$baker-colors: (
+	"dark-sky": #88c2e1ff,
+	"midnight-blue": #14144dff,
+	"princeton-orange": #fd8629ff,
+	"minion-yellow": #fde74cff,
+	"russet": #773d1eff,
+);
+
+$primary: map-get($baker-colors, "russet");
+$background: map-get($baker-colors, "midnight-blue");
+
+.dark-sky-gradient {
+	background: linear-gradient(45deg, map-get($baker-colors, "midnight-blue") 75%, map-get($baker-colors, "dark-sky")) no-repeat;
+}

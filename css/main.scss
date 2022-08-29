@@ -1,7 +1,6 @@
 ---
 ---
 
-@import "bootstrap_variables";
 
 
 /*!
@@ -15,7 +14,19 @@
 // scss-docs-start import-stack
 // Configuration
 @import "bootstrap/functions";
+
+// Custom variable overrides
+@import "brand"; // Although this contains a map, we aren't overriding a bootstrap map 
+@import "style";
+@import "bootstrap_variables";
+
+// Bootstrap variables
 @import "bootstrap/variables";
+
+// Custom map overrides 
+$theme-colors: map-merge($theme-colors, $baker-colors);
+
+// Bootstrap maps 
 @import "bootstrap/maps";
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
